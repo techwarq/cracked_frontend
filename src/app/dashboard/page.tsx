@@ -33,7 +33,15 @@ export default function Dashboard() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <img
+          src="/Bat Png.png" // Update this with the correct path to your bat image
+          alt="Loading Bat"
+          className=" w-32 h-32 animate-spinner transform-gpu"
+        />
+      </div>
+    );
   }
 
   // Transform data for PieChart (example transformation, adjust as necessary)
@@ -48,7 +56,7 @@ export default function Dashboard() {
   return (
     <>
       {/* Display metrics on cards */}
-      <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 mt-10 md:gap-8 lg:grid-cols-4">
         <Card className="bg-transparent text-white border-purple-900">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle>Total Solved Questions</CardTitle>

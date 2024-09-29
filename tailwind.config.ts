@@ -12,6 +12,16 @@ const config: Config = {
 		fontFamily: {
 			'jersey': ['"Jersey 25"', 'sans-serif'],
 		  },
+		  animation: {
+			spinner: 'spinner 2s infinite ease',
+		  },
+		  keyframes: {
+			spinner: {
+			  '0%': { transform: 'rotate(45deg) rotateX(-25deg) rotateY(25deg)' },
+			  '50%': { transform: 'rotate(45deg) rotateX(-385deg) rotateY(25deg)' },
+			  '100%': { transform: 'rotate(45deg) rotateX(-385deg) rotateY(385deg)' },
+			},
+		  },
 		  
   		colors: {
   			background: 'hsl(var(--background))',

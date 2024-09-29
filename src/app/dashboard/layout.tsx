@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
             <div className=" ">
        
        </div>
-            <header className="sticky dark:bg-black top-0 flex h-16 items-center justify-between gap-4 border-b border-purple-900">
+            <header className="sticky dark:bg-slate-700 top-0 flex h-16 items-center justify-between gap-4 border-b border-purple-900">
             <nav className="hidden  dark:text-white font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <DashboardNavigation  />
         </nav>
@@ -50,7 +50,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
 
        
             </header>
-            <main className="my-5">{children}</main>
+            <main className="my-5 ">{children}</main>
         </div>
     );
 }

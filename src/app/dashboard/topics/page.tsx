@@ -13,6 +13,7 @@ type Topic = {
 
 export default function Topics() {
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchTopics = async () => {
@@ -20,6 +21,7 @@ export default function Topics() {
         const response = await fetch("https://cracked-backend-4b74.vercel.app/api/topics");
         const data = await response.json();
         setTopics(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching topics:", error);
       }
@@ -28,6 +30,17 @@ export default function Topics() {
     fetchTopics();
   }, []);
 
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <img
+          src="/Bat Png.png" // Update this with the correct path to your bat image
+          alt="Loading Bat"
+          className=" w-32 h-32 animate-spinner transform-gpu"
+        />
+      </div>
+    );
+  }
   
 
   return (

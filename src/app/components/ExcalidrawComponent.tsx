@@ -7,7 +7,13 @@ const Excalidraw = dynamic(
   async () => (await import("@excalidraw/excalidraw")).Excalidraw,
   {
     ssr: false,
-    loading: () => <p className="text-white">Loading Excalidraw...</p>,
+    loading: () =>  <div className="flex justify-center items-center h-screen">
+    <img
+      src="/Bat Png.png" // Update this with the correct path to your bat image
+      alt="Loading Bat"
+      className=" w-32 h-32 animate-spinner transform-gpu"
+    />
+  </div>,
   }
 );
 
