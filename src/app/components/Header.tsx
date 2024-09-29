@@ -12,7 +12,7 @@ export default function Header(){
     return (
         <div className="fixed top-0 z-50 bg-neutral-900 backdrop-blur-sm border-b border-neutral-600 lg:bg-neutral-900 lg:backdrop-blur-sm w-full">
             <div className="flex items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-                <h1 className="font-bold text-2xl">DashBoard</h1>
+                <h1 className=" font-bold text-2xl font-mono">Crackedd <span className="relative -ml-3 inline-block" style={{ display: 'inline-block', transform: 'rotate(10deg)', transformOrigin: 'bottom left' }}>d</span></h1>
 
                 <nav className="hidden fixed top-[5rem] left-0 right-0 bottom-0 bg-neutral-800 lg:static lg:flex lg:mx-auto lg:bg-transparent">
                     <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">

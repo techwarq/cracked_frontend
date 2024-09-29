@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center bg-gray-900 justify-center h-screen w-full text-center px-4">
+    <section className="flex flex-col items-center  bg-gradient-to-b from-gray-900 via-purple-950 to-black  justify-center h-screen w-full text-center px-4">
       <h1 className="text-3xl sm:text-4xl max-w-[62rem] md:text-5xl lg:text-5xl font-bold text-neutral-100 mb-6">
         Create Your Own{" "}
         <span className="text-purple-800">DashBoard</span> And Get Into{" "}
