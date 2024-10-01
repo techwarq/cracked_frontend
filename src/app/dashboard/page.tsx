@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { PieChart, Pie, Cell, Label, Tooltip as ChartTooltip } from "recharts";
 import { fetchDashboardMetrics } from "../actions/backend"; // Adjust the import path as needed
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import CalHeatmap from "cal-heatmap";
+import HeatMapComponent from "../components/HeatMapComponent";
+
 
 interface Metrics {
   solvedQuestionsCount: number;
@@ -57,7 +59,7 @@ export default function Dashboard() {
     <>
       {/* Display metrics on cards */}
       <div className="grid gap-6 md:grid-cols-2 mt-10 md:gap-8 lg:grid-cols-4">
-        <Card className="bg-transparent text-white border-purple-900">
+        <Card className="bg-white/10 text-white border-none">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle>Total Solved Questions</CardTitle>
           </CardHeader>
@@ -67,7 +69,7 @@ export default function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card className="bg-transparent text-white border-purple-900">
+        <Card className="bg-white/10 text-white border-none">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle>Total Topics</CardTitle>
           </CardHeader>
@@ -77,7 +79,7 @@ export default function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card className="bg-transparent text-white border-purple-900">
+        <Card className="bg-white/10 text-white border-none">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle>Completed Topics</CardTitle>
           </CardHeader>
@@ -90,7 +92,7 @@ export default function Dashboard() {
 
       {/* Progress Chart */}
       <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3 mt-10">
-        <Card className="xl:col-span-2 border-purple-900 bg-transparent text-white">
+        <Card className="xl:col-span-2 border-none bg-white/10 text-white">
           <CardHeader className="items-center pb-0">
             <CardTitle>Progress Data</CardTitle>
             <CardDescription>January - June 2024</CardDescription>
@@ -154,20 +156,13 @@ export default function Dashboard() {
         </Card>
 
         {/* Recent Orders Card */}
-        <Card className="bg-transparent border-purple-900 text-white">
+        <Card className="bg-white/10 border-none text-white">
           <CardHeader>
             <CardTitle>Recent Orders</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-8">
             <div className="flex items-center gap-4">
-              <Avatar className="hidden sm:flex h-9 w-9">
-                <AvatarFallback>RS</AvatarFallback>
-              </Avatar>
-              <div className="grid gap-1">
-                <p className="text-sm font-medium">Sunil</p>
-                <p className="text-sm text-muted-foreground">ramesh@test.com</p>
-              </div>
-              <p className="ml-auto font-medium">+Rs 1,99,999</p>
+             <HeatMapComponent />
             </div>
             {/* Add additional recent order entries as needed */}
           </CardContent>
