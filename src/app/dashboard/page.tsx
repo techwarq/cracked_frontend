@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { PieChart, Pie, Cell, Label, Tooltip as ChartTooltip } from "recharts";
 import { fetchDashboardMetrics } from "../actions/backend"; // Adjust the import path as needed
-import CalHeatmap from "cal-heatmap";
+
 import HeatMapComponent from "../components/HeatMapComponent";
 
 
