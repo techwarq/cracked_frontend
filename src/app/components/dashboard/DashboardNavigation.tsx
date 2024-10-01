@@ -25,8 +25,8 @@ const links = [
     },
 
     {
-        name: "Farmers",
-        href: "/dashboard/farmers"
+        name: "About",
+        href: "/dashboard/About"
     }
 ]
 
