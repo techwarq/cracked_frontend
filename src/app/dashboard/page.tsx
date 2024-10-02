@@ -146,7 +146,7 @@ export default function Dashboard() {
           </CardContent>
           <CardFooter className="flex-col gap-2 text-sm">
             <div className="flex items-center gap-2 font-medium leading-none">
-              Trending up by 5.2% this month
+              Increased up by 5.2% this month
               {/* Add a suitable icon if needed */}
             </div>
             <div className="leading-none text-muted-foreground">
@@ -158,7 +158,7 @@ export default function Dashboard() {
         {/* Recent Orders Card */}
         <Card className="bg-white/10 border-none text-white">
           <CardHeader>
-            <CardTitle>Recent Orders</CardTitle>
+            <CardTitle>Head down,Work</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-8">
             <div className="flex items-center gap-4">

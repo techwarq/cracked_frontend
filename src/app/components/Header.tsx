@@ -45,7 +45,7 @@ export default function Header(){
                     <Link href="/signup" className="text-neutral-100 transition-colors hover:text-neutral-100">
                         New Account
                     </Link>
-                    <Button variant="outline" className="border-purple-700">Sign Up</Button>
+                    <Button variant="outline" className="border-purple-700">Sign In</Button>
                 </div>
             </div>
         </div>
